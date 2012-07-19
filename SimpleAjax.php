@@ -46,8 +46,12 @@ class SimpleAjax extends Controller
 {
 	/**
 	 * Call the parent constructor.
-	 * DON'T REMOVE THIS
-	 * 
+	 *
+	 * !!! DON'T REMOVE THIS !!!
+	 *
+	 * If you remove this you get the following error message:
+	 * Fatal error: Call to protected System::__construct() from invalid context
+	 *
 	 * @param void
 	 * @return void
 	 */
@@ -59,7 +63,7 @@ class SimpleAjax extends Controller
 
 	/**
 	 * Get the ajax request and call all hooks
-	 * 
+	 *
 	 * @param void
 	 * @return void
 	 */
