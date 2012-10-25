@@ -21,11 +21,10 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Leo Unglaub 2012
- * @author     Leo Unglaub <leo@leo-unglaub.net>
- * @package    simple_ajax
- * @license    LGPL
- * @filesource
+ * @copyright	Leo Unglaub 2012
+ * @author		Leo Unglaub <leo@leo-unglaub.net>
+ * @package		simple_ajax
+ * @license		LGPL
  */
 
 // simple trick for Contao < 2.10
@@ -52,8 +51,8 @@ class SimpleAjax extends Controller
 	 * If you remove this you get the following error message:
 	 * Fatal error: Call to protected System::__construct() from invalid context
 	 *
-	 * @param void
-	 * @return void
+	 * @param	void
+	 * @return	void
 	 */
 	public function __construct()
 	{
@@ -64,8 +63,8 @@ class SimpleAjax extends Controller
 	/**
 	 * Get the ajax request and call all hooks
 	 *
-	 * @param void
-	 * @return void
+	 * @param	void
+	 * @return	void
 	 */
 	public function run()
 	{
