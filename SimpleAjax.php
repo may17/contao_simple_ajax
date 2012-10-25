@@ -71,6 +71,7 @@ class SimpleAjax extends Controller
 		// check if a hook is registered
 		if (is_array($GLOBALS['TL_HOOKS']['simpleAjax']) && count($GLOBALS['TL_HOOKS']['simpleAjax']) > 0)
 		{
+			// execute every registered callback
 			foreach ($GLOBALS['TL_HOOKS']['simpleAjax'] as $callback)
 			{
 				$this->import($callback[0]);
@@ -78,12 +79,14 @@ class SimpleAjax extends Controller
 			}
 		}
 
+		// if there is no other output, we generate a 412 error response
 		header('HTTP/1.1 412 Precondition Failed');
 		die('Simple Ajax: Invalid AJAX call.');
 	}
 }
 
 
+// create a SimpleAjax instance and run it.
 $objSimpleAjax = new SimpleAjax();
 $objSimpleAjax->run();
 
