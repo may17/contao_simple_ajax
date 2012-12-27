@@ -27,13 +27,18 @@
  * @license		LGPL
  */
 
+
 // simple trick for Contao < 2.10
 $arrPost = $_POST;
 unset($_POST);
 
+
+// inizialize the contao framework
 define('TL_MODE', 'FE');
 require('system/initialize.php');
 
+
+// write the post data back into the array
 $_POST = $arrPost;
 
 
@@ -49,7 +54,8 @@ class SimpleAjax extends Controller
 	 * !!! DON'T REMOVE THIS !!!
 	 *
 	 * If you remove this you get the following error message:
-	 * Fatal error: Call to protected System::__construct() from invalid context
+	 * Fatal error: Call to protected System::__construct() from invalid
+	 * context
 	 *
 	 * @param	void
 	 * @return	void
@@ -86,7 +92,7 @@ class SimpleAjax extends Controller
 }
 
 
-// create a SimpleAjax instance and run it.
+// create a SimpleAjax instance and run it
 $objSimpleAjax = new SimpleAjax();
 $objSimpleAjax->run();
 
