@@ -75,7 +75,7 @@ $_POST = $arrPost;
  * {
  * 	public function myMethod()
  * 	{
- * 		if ($this->Input->get('acid' == 'myrequest'))
+ * 		if ($this->Input->get('acid') == 'myrequest')
  * 		{
  * 			$arrReturn = array('foo', 'bar', 'foobar');
  *
